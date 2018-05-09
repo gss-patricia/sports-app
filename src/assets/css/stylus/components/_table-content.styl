@@ -1,0 +1,63 @@
+
+/* Table Base */
+
+table
+  background-color transparent
+  border-collapse collapse
+  border-spacing 0
+  width 100%
+
+.table
+  margin-bottom 20px
+  width 100%
+
+  th, td
+    font-size 12px
+    line-height 20px
+    padding 8px
+    text-align left
+    vertical-align middle
+
+  td:last-child
+    border-right 0
+
+  thead th
+    border-bottom 1px solid #999999
+    font-weight normal
+    font-size 15px
+
+  tbody > tr:nth-child(odd) > td,
+  tbody > tr:nth-child(odd) > th
+    background-color #f8f8f8
+
+
+  tbody > tr:hover td
+    background-color #ccc
+
+/* Small Sizes */
+@media (max-width: 767px)
+
+  /* Responsive Table */
+  .table-responsive
+    display block
+    position relative
+    width 100%
+
+    thead, tbody, th, td, tr
+      display block
+
+    td, th
+      height 35px
+
+    thead
+      float left
+
+    tbody
+      width auto
+      position relative
+      overflow-x auto
+      -webkit-overflow-scrolling touch
+      white-space nowrap
+
+      tr
+        display inline-block
