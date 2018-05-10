@@ -2,6 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default class TableContent extends React.Component {
+    constructor () {
+        super();
+        this.quantityPhotos = this.quantityPhotos.bind(this);
+    }
+
+    quantityPhotos (albums) {
+        return albums.map(elem => elem.photos.length);
+    }
+
     render() {
         let userData = this.props.userdata;
         return (
@@ -31,9 +40,9 @@ export default class TableContent extends React.Component {
                                 <td>{item.address.city}</td>
                                 <td>...</td>
                                 <td>5</td>
-                                <td>58</td>
-                                <td>24</td>
-                                <td>+34</td>
+                                <td>{item.posts.length}</td>
+                                <td>{item.albums.length}</td>
+                                <td>{this.quantityPhotos(item.albums)}</td>
                             </tr>
                         )
                     })

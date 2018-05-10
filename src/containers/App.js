@@ -15,6 +15,35 @@ class App extends Component {
                 <div className="App">
                     <Header/>
                     <Breadcrumb/>
+                    <div className="painel-info">
+                        <div className="painel-info__item">
+                            <div className="painel-info__icon">
+                                <i className="fas fa-puzzle-piece"/>
+                            </div>
+                            <div className="painel-info__labels">
+                                <div className="painel-info__label">Sport type</div>
+                                <div className="painel-info__label painel-info__label--big">Cycling</div>
+                            </div>
+                        </div>
+                        <div className="painel-info__item">
+                            <div className="painel-info__icon">
+                                <i className="fas fa-trophy"/>
+                            </div>
+                            <div className="painel-info__labels">
+                                <div className="painel-info__label">Mode</div>
+                                <div className="painel-info__label painel-info__label--big">Advanced</div>
+                            </div>
+                        </div>
+                        <div className="painel-info__item">
+                            <div className="painel-info__icon">
+                                <i className="fas fa-home"/>
+                            </div>
+                            <div className="painel-info__labels">
+                                <div className="painel-info__label">Route</div>
+                                <div className="painel-info__label painel-info__label--big">30 miles</div>
+                            </div>
+                        </div>
+                    </div>
                     <main>
                         <Switch>
                             <Route exact path="/" component={HomePage}/>
