@@ -13,17 +13,7 @@ export default class UserApi {
 
     static getUserAlbums (userId) {
         return fetch(`https://jsonplaceholder.typicode.com/albums?userId=${userId}`)
-            .then(response => response.json())
-            .then(albums => {
-                return Promise.all(
-                    albums.map(album => {
-                        return UserApi.getAlbumPhotos(album.id)
-                            .then(photos => {
-                                album.photos = photos;
-                            });
-                    })
-                ).then(() => albums);
-            });
+            .then(response => response.json());
     }
 
     static getParsedUsers () {
@@ -34,6 +24,13 @@ export default class UserApi {
                     users.map(user => Promise.all([
                         UserApi.getUserAlbums(user.id).then(albums => {
                             user.albums = albums;
+
+                            albums.map(album => Promise.all([
+                               UserApi.getAlbumPhotos(album.id).then(photos => {
+                                    user.photos = photos;
+                                })
+                            ]));
+
                         }),
                         UserApi.getUserPosts(user.id).then(posts => {
                             user.posts = posts;
