@@ -7,6 +7,7 @@ import HomePage from './HomePage';
 import Header from '../common/components/Header';
 import Breadcrumb from '../common/components/Breadcrumb';
 import UserDetailPage from './UserDetailPage';
+import Heading from '../common/components/heading';
 
 class App extends Component {
     render() {
@@ -44,6 +45,7 @@ class App extends Component {
                             </div>
                         </div>
                     </div>
+                    <Heading text="Users" />
                     <main>
                         <Switch>
                             <Route exact path="/" component={HomePage}/>
