@@ -22,9 +22,9 @@ export default class TableContent extends React.Component {
 
                 <tbody>
                 {
-                    userData.map((item) =>{
+                    userData.map((item, index) =>{
                         return (
-                            <tr>
+                            <tr key={index}>
                                 <td>{item.username}</td>
                                 <td>{item.name}</td>
                                 <td>{item.email}</td>
