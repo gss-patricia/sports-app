@@ -25,6 +25,7 @@ class Checkbox extends Component {
                     <div className="checkbox-inner-container">
                         <input className="checkbox-input hidden"
                                type="checkbox"
+                               value={this.props.value}
                                onChange={this.handleValue}
                         />
                         <div className="checkbox-frame"/>
