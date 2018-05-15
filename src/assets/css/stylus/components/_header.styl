@@ -25,7 +25,6 @@
     transition-duration .2s
     transition-timing-function cubic-bezier(.4,0,.2,1)
     min-height 80px
-    max-height 1000px
     padding 0
     margin 0
     box-sizing border-box
@@ -60,6 +59,9 @@
       height 80px
       margin 0
       padding 0 40px 0 40px
+
+      @media $small-only
+        padding 0 10px 0 10px
 
   &__content
     position relative
