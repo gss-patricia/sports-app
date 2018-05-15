@@ -100,6 +100,18 @@ export default class Form extends React.Component {
                                    name="email"
                                    onChange={this.handleChange}/>
                         </div>
+                        <div className="form-item">
+                            <input
+                                type="submit"
+                                value="Save"
+                                className="button button__save button--primary"
+                            />
+                            <button
+                                value="Discard"
+                                onClick={this.clear}
+                                className="button default"
+                            >Discard</button>
+                        </div>
                     </div>
 
                     <div className="form-right">
@@ -161,18 +173,6 @@ export default class Form extends React.Component {
                             <div className="checkbox-area">
                                 {this.generateCheckboxes()}
                             </div>
-                        </div>
-                        <div className="form-item">
-                            <input
-                                type="submit"
-                                value="Submit"
-                                className="button is-primary"
-                            />
-                            <button
-                                value="Discard"
-                                onClick={this.clear}
-                                className="button default"
-                            >Discard</button>
                         </div>
                     </div>
                 </form>
