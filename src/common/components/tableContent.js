@@ -27,12 +27,12 @@ export default class TableContent extends React.Component {
                             <tr key={index}>
                                 <td>{item.username}</td>
                                 <td>{item.name}</td>
-                                <td>{item.email}</td>
-                                <td>{item.address ? item.address.city : item.city}</td>
+                                <td className="text-color-primary">{item.email}</td>
+                                <td className="text-color-primary">{item.address ? item.address.city : item.city}</td>
                                 <td>...</td>
                                 <td>{item.rideingroup ? item.rideingroup.join(', ') : 'n/a'}</td>
-                                <td>{item.posts ? item.posts.length : 0}</td>
-                                <td>{item.albums ? item.albums.length : 0}</td>
+                                <td className="text-color-primary">{item.posts ? item.posts.length : 0}</td>
+                                <td className="text-color-primary">{item.albums ? item.albums.length : 0}</td>
                                 <td>{item.photos ? item.photos.length : 0}</td>
                             </tr>
                         )

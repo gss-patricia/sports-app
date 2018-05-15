@@ -10,12 +10,14 @@ export default class Form extends React.Component {
             username: '',
             name: '',
             email: '',
-            city: ''
+            city: '',
+            ride: ''
         };
         this.clear = this.clear.bind(this);
         this.handleCheckboxes = this.handleCheckboxes.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleRadio = this.handleRadio.bind(this);
         this.generateCheckboxes = this.generateCheckboxes.bind(this);
         this.selectedCheckboxes = new Set();
     }
@@ -59,6 +61,12 @@ export default class Form extends React.Component {
         } else {
             this.selectedCheckboxes.add(selectedCheckbox);
         }
+    }
+
+    handleRadio (event) {
+        this.setState({
+            ride: event.target.value
+        });
     }
 
     render() {
@@ -106,37 +114,43 @@ export default class Form extends React.Component {
                         <div className="radio-wrapper">
                             <label>Ride in group?</label>
                             <div className="radio-area">
-                                <div className="radio-button radio--is-checked">
+                                <div className={`radio-button ${this.state.ride === "always"? 'radio--is-checked':''}`}>
                                     <div className="radio-container">
                                         <div className="radio-outer-circle"/>
                                         <div className="radio-inner-circle"/>
                                     </div>
-                                    <input className="mat-radio-input hidden"
+                                    <input className="radio-input hidden"
                                            type="radio"
                                            tabIndex="0"
-                                           name="rideingroup"/>
+                                           checked={this.state.ride === "always"}
+                                           onChange={this.handleRadio}
+                                           name="always"/>
                                     <div className="radio-label-content">Always</div>
                                 </div>
-                                <div className="form-wrapper radio-button radio--is-checked">
+                                <div className={`radio-button ${this.state.ride === "sometimes"? 'radio--is-checked':''}`}>
                                     <div className="radio-container">
                                         <div className="radio-outer-circle"/>
                                         <div className="radio-inner-circle"/>
                                     </div>
                                     <div className="radio-label-content">Sometimes</div>
-                                    <input className="mat-radio-input hidden"
+                                    <input className="radio-input hidden"
                                            type="radio"
                                            tabIndex="1"
-                                           name="mat-radio-group-0"/>
+                                           checked={this.state.ride === "sometimes"}
+                                           onChange={this.handleRadio}
+                                           name="sometimes"/>
                                 </div>
-                                <div className="form-wrapper radio-button radio--is-checked">
+                                <div onClick={this.handleRadio} className={`radio-button ${this.state.ride === "never"? 'radio--is-checked':''}`}>
                                     <div className="radio-container">
                                         <div className="radio-outer-circle"/>
                                         <div className="radio-inner-circle"/>
                                     </div>
-                                    <input className="mat-radio-input hidden"
+                                    <input className="radio-input hidden"
                                            type="radio"
                                            tabIndex="2"
-                                           name="rideingroup"/>
+                                           checked={this.state.ride === "never"}
+                                           onChange={this.handleRadio}
+                                           name="never"/>
                                     <div className="radio-label-content">Never</div>
                                 </div>
                             </div>

@@ -1,6 +1,6 @@
 .checkbox
-  transition: background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);
-  cursor: pointer
+  transition background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1)
+  cursor pointer
   margin-right 8px
 
   &-layout
@@ -27,35 +27,35 @@
     left 50%
 
 .hidden
-  border 0;
-  clip rect(0 0 0 0);
-  height 1px;
-  margin -1px;
-  overflow hidden;
-  padding 0;
-  position: absolute;
-  width: 1px;
-  outline: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  border 0
+  clip rect(0 0 0 0)
+  height 1px
+  margin -1px
+  overflow hidden
+  padding 0
+  position absolute
+  width 1px
+  outline 0
+  -webkit-appearance none
+  -moz-appearance none
 
-.checkbox-frame {
-  background-color: transparent;
-  transition: border-color 90ms cubic-bezier(0,0,.2,.1);
-  border-width: 2px;
-  border-style: solid;
-}
+.checkbox-frame 
+  background-color transparent
+  transition border-color 90ms cubic-bezier(0,0,.2,.1)
+  border-width 2px
+  border-style solid
 
-.checkbox-background {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  border-radius: 2px;
-  box-sizing: border-box;
-  pointer-events: none;
-}
+
+.checkbox-background 
+  top 0
+  left 0
+  right 0
+  bottom 0
+  position absolute
+  border-radius 2px
+  box-sizing border-box
+  pointer-events none
+
 
 .checkbox-frame
   border-color $mountain-meadow
@@ -63,65 +63,65 @@
 .checkbox--is-checked.accent .checkbox-background
   background-color transparent
 
-.checkbox-anim-unchecked-checked .checkbox-background {
-  animation: 180ms linear 0s checkbox-fade-in-background;
-}
+.checkbox-anim-unchecked-checked .checkbox-background 
+  animation 180ms linear 0s checkbox-fade-in-background
 
-.checkbox-background {
-  align-items: center;
-  display: inline-flex;
-  justify-content: center;
-  transition: background-color 90ms cubic-bezier(0,0,.2,.1),opacity 90ms cubic-bezier(0,0,.2,.1);
-}
 
-.checkbox-background, .checkbox-frame {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  border-radius: 2px;
-  box-sizing: border-box;
-  pointer-events: none;
-}
+.checkbox-background 
+  align-items center
+  display inline-flex
+  justify-content center
+  transition background-color 90ms cubic-bezier(0,0,.2,.1),opacity 90ms cubic-bezier(0,0,.2,.1)
 
-.checkbox--is-checked .checkbox-checkmark {
-  opacity: 1;
-}
 
-.checkbox-checkmark {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  width: 100%;
-}
+.checkbox-background, .checkbox-frame 
+  top 0
+  left 0
+  right 0
+  bottom 0
+  position absolute
+  border-radius 2px
+  box-sizing border-box
+  pointer-events none
+
+
+.checkbox--is-checked .checkbox-checkmark 
+  opacity 1
+
+
+.checkbox-checkmark 
+  top 0
+  left 0
+  right 0
+  bottom 0
+  position absolute
+  width 100%
+
 
 .checkbox-checkmark, .checkbox-mixedmark
-  width: 100%
+  width 100%
 
-.checkbox-checkmark {
-  fill: #000000;
-}
+.checkbox-checkmark 
+  fill #000000
 
-.checkbox-anim-unchecked-checked .checkbox-checkmark-path {
-  animation: 180ms linear 0s checkbox-unchecked-checked-checkmark-path;
-}
 
-.checkbox--is-checked .checkbox-checkmark-path {
-  stroke-dashoffset: 0;
-}
+.checkbox-anim-unchecked-checked .checkbox-checkmark-path 
+  animation 180ms linear 0s checkbox-unchecked-checked-checkmark-path
 
-.checkbox-checkmark-path {
-  stroke-dashoffset: 22.91026;
-  stroke-dasharray: 22.91026;
-  stroke-width: 2.66667px;
-}
 
-.checkbox-checkmark-path {
-  stroke: #000000!important;
-}
+.checkbox--is-checked .checkbox-checkmark-path 
+  stroke-dashoffset 0
+
+
+.checkbox-checkmark-path 
+  stroke-dashoffset 22.91026
+  stroke-dasharray 22.91026
+  stroke-width 2.66667px
+
+
+.checkbox-checkmark-path 
+  stroke #000000!important
+
 
 .checkbox--is-checked .checkbox-mixedmark
   transform scaleX(1) rotate(-45deg)

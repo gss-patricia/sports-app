@@ -5,12 +5,10 @@ export default class Header extends React.Component {
         return (
             <div className="layout__header">
                 <div className="layout__header-row">
-                    <img className="matera-logo-image" src="" alt="logotipo"/>
-                    <div className="navigation-container">
-                        <div className="navigation">
-                            <a href="#" className="navigation__link">Support</a>
-                        </div>
+                    <div className="layout__header-logo">
+                        <i className="fas fa-basketball-ball"/>
                     </div>
+                    <div className="layout__header-logotipo">Venturus Sports</div>
                 </div>
             </div>
         );
