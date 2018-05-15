@@ -103,21 +103,51 @@ export default class Form extends React.Component {
                                    name="city"
                                    onChange={this.handleChange}/>
                         </div>
-
-                        <div className="form-wrapper radio-button accent radio-checked">
-                            <div className="radio-container">
-                                <div className="radio-outer-circle"/>
-                                <div className="radio-inner-circle"/>
-                            </div>
-
-                            <div className="checkbox-container">
-                                <label>Days of the week</label>
-                                <div className="checkbox-area">
-                                    {this.generateCheckboxes()}
+                        <div className="radio-wrapper">
+                            <label>Ride in group?</label>
+                            <div className="radio-area">
+                                <div className="radio-button radio--is-checked">
+                                    <div className="radio-container">
+                                        <div className="radio-outer-circle"/>
+                                        <div className="radio-inner-circle"/>
+                                    </div>
+                                    <input className="mat-radio-input hidden"
+                                           type="radio"
+                                           tabIndex="0"
+                                           name="rideingroup"/>
+                                    <div className="radio-label-content">Always</div>
+                                </div>
+                                <div className="form-wrapper radio-button radio--is-checked">
+                                    <div className="radio-container">
+                                        <div className="radio-outer-circle"/>
+                                        <div className="radio-inner-circle"/>
+                                    </div>
+                                    <div className="radio-label-content">Sometimes</div>
+                                    <input className="mat-radio-input hidden"
+                                           type="radio"
+                                           tabIndex="1"
+                                           name="mat-radio-group-0"/>
+                                </div>
+                                <div className="form-wrapper radio-button radio--is-checked">
+                                    <div className="radio-container">
+                                        <div className="radio-outer-circle"/>
+                                        <div className="radio-inner-circle"/>
+                                    </div>
+                                    <input className="mat-radio-input hidden"
+                                           type="radio"
+                                           tabIndex="2"
+                                           name="rideingroup"/>
+                                    <div className="radio-label-content">Never</div>
                                 </div>
                             </div>
                         </div>
 
+                        <div className="checkbox-container">
+                            <label>Days of the week</label>
+                            <div className="checkbox-area">
+                                {this.generateCheckboxes()}
+                            </div>
+                        </div>
                         <div className="form-item">
                             <input
                                 type="submit"

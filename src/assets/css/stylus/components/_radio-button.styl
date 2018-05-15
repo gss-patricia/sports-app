@@ -1,59 +1,59 @@
-.radio-container {
-  box-sizing: border-box;
-  display: inline-block;
-  position: relative;
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-}
+.radio
+  &-container
+    display inline-block
+    position relative
+    width 20px
+    height 17px
+    flex-shrink 0
 
-.radio-button.accent.radio-checked .radio-outer-circle {
-  border-color: #ff4081;
-}
+  &-button
+    margin-right 8px
 
-.radio-outer-circle {
-  box-sizing: border-box;
-  height: 20px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  transition: border-color ease 280ms;
-  width: 20px;
-  border-width: 2px;
-  border-style: solid;
-  border-radius: 50%;
-}
+.radio-button.radio--is-checked .radio-outer-circle
+  border-color $mountain-meadow
 
-.radio-button.accent .radio-inner-circle {
-  background-color: #ff4081;
-}
+.radio-outer-circle
+  height 20px
+  left 0
+  position absolute
+  top 0
+  transition border-color ease 280ms
+  width 20px
+  border-width 2px
+  border-style solid
+  border-radius 50%
 
-.radio-checked .radio-inner-circle {
-  transform: scale(.5);
-}
+.radio-button .radio-inner-circle
+  background-color #000000
 
-.radio-inner-circle {
-  border-radius: 50%;
-  box-sizing: border-box;
-  height: 20px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  transition: transform ease 280ms,background-color ease 280ms;
-  width: 20px;
-  transform: scale(.001);
-}
+.radio--is-checked .radio-inner-circle
+  transform scale(.5)
 
-.cdk-visually-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  outline: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
+.radio-inner-circle
+  border-radius 50%
+  box-sizing border-box
+  height 20px
+  left 0
+  position absolute
+  top 0
+  transition transform ease 280ms,background-color ease 280ms
+  width 20px
+  transform scale(.001)
+
+.hidden
+  border 0
+  clip rect(0 0 0 0)
+  height 1px
+  margin -1px
+  overflow hidden
+  padding 0
+  position absolute
+  width 1px
+  outline 0
+  -webkit-appearance none
+  -moz-appearance none
+
+.radio-label-content
+  display inline-block
+  line-height inherit
+  padding-left 8px

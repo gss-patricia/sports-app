@@ -38,7 +38,6 @@
   outline: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
-}
 
 .checkbox-frame {
   background-color: transparent;
@@ -58,13 +57,11 @@
   pointer-events: none;
 }
 
-.checkbox-frame {
-  border-color: rgba(0,0,0,.54);
-}
+.checkbox-frame
+  border-color $mountain-meadow
 
-.checkbox--is-checked.accent .checkbox-background {
-  background-color: #ff4081;
-}
+.checkbox--is-checked.accent .checkbox-background
+  background-color transparent
 
 .checkbox-anim-unchecked-checked .checkbox-background {
   animation: 180ms linear 0s checkbox-fade-in-background;
@@ -105,7 +102,7 @@
   width: 100%
 
 .checkbox-checkmark {
-  fill: #fafafa;
+  fill: #000000;
 }
 
 .checkbox-anim-unchecked-checked .checkbox-checkmark-path {
@@ -123,7 +120,7 @@
 }
 
 .checkbox-checkmark-path {
-  stroke: #fafafa!important;
+  stroke: #000000!important;
 }
 
 .checkbox--is-checked .checkbox-mixedmark
