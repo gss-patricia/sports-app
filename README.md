@@ -15,4 +15,4 @@ $ npm install
 $ npm start
 ```
 
-Em alguns instantes, o comando ``npm start`` irá abrir o navegador com o projeto rodando. Caso não abrir, insira a url que apareceu no terminal. (Provavelmente: [http://localhost:300](http://localhost:3000)).
+Em alguns instantes, o comando ``npm start`` irá abrir o navegador com o projeto rodando. Caso não abrir, insira a url que apareceu no terminal. (Provavelmente: [http://localhost:3000](http://localhost:3000)).
