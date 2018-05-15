@@ -17,7 +17,9 @@ class HomePage extends Component {
     }
 
     handleFormValue (value) {
-        console.log(value);
+        let users = this.state.users;
+        users.push(value);
+        this.setState({users});
     }
 
     render() {
